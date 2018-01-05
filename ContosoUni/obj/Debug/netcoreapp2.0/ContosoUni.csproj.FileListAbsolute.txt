@@ -1,0 +1,10 @@
+/home/belle/RiderProjects/ContosoUni/ContosoUni/bin/Debug/netcoreapp2.0/ContosoUni.deps.json
+/home/belle/RiderProjects/ContosoUni/ContosoUni/bin/Debug/netcoreapp2.0/ContosoUni.runtimeconfig.json
+/home/belle/RiderProjects/ContosoUni/ContosoUni/bin/Debug/netcoreapp2.0/ContosoUni.runtimeconfig.dev.json
+/home/belle/RiderProjects/ContosoUni/ContosoUni/bin/Debug/netcoreapp2.0/ContosoUni.dll
+/home/belle/RiderProjects/ContosoUni/ContosoUni/bin/Debug/netcoreapp2.0/ContosoUni.pdb
+/home/belle/RiderProjects/ContosoUni/ContosoUni/obj/Debug/netcoreapp2.0/ContosoUni.csproj.CoreCompileInputs.cache
+/home/belle/RiderProjects/ContosoUni/ContosoUni/obj/Debug/netcoreapp2.0/ContosoUni.AssemblyInfoInputs.cache
+/home/belle/RiderProjects/ContosoUni/ContosoUni/obj/Debug/netcoreapp2.0/ContosoUni.AssemblyInfo.cs
+/home/belle/RiderProjects/ContosoUni/ContosoUni/obj/Debug/netcoreapp2.0/ContosoUni.dll
+/home/belle/RiderProjects/ContosoUni/ContosoUni/obj/Debug/netcoreapp2.0/ContosoUni.pdb

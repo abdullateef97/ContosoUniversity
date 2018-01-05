@@ -1,0 +1,45 @@
+﻿@using System.Collections.Generic
+@model ContosoUni.Models.Student
+
+@{
+    ViewBag.Title = "Student Details";
+    Layout = "_Layout";
+}
+
+<h3>Student Details</h3>
+<dl>
+    <dt>
+        @Html.DisplayNameFor(model => model.FirstName)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.FirstName)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.LastName)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.LastName)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.Enrollments)
+    </dt>
+    <dd>
+        <table class="table">
+            <tr>
+                <th>Course Title</th>
+                <th>Grade</th>
+            </tr>
+            @foreach (var item in Model.Enrollments)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.course.Title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Grade)
+                    </td>
+                </tr>
+            }
+        </table>
+    </dd>
+</dl>

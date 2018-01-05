@@ -1,0 +1,33 @@
+﻿@model Department
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Edit Department</h2>
+
+<h3>Edit Course Details</h3>
+
+<form asp-action="Edit" method="post" asp-route-id="@Model.DepartmentID">
+   
+    <div class="form-group">
+         <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" value="@Model.Name"></input>
+        <span asp-validation-for="Name" class="text-danger"/>
+
+    </div>
+    <div class="form-group">
+        <label asp-for="Budget"></label>
+        <input asp-for="Budget" class="form-control" value="@Model.Budget"/>
+        <span asp-validation-for="Budget" class="text-danger"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="StartDate"></label>
+        <input asp-for="StartDate" class="form-control" value="@Model.StartDate"/>
+        <span asp-validation-for="StartDate" class="text-danger"/>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Edit</button>
+
+</form>

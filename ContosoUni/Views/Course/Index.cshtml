@@ -1,0 +1,54 @@
+﻿@model IQueryable<DepartmentalCourse>
+
+@{
+    ViewData["Title"] = "Courses";
+}
+
+<h2>Courses</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+@*            @Html.DisplayNameFor(model => model.CourseID)*@ CourseId
+        </th>
+        <th>
+@*            @Html.DisplayNameFor(model => model.Title)*@ Title
+        </th>
+        <th>
+@*            @Html.DisplayNameFor(model => model.Credits)*@ Credits
+        </th>
+        <th>
+@*            @Html.DisplayNameFor(model => model.Department)*@ Department
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Course.CourseID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Course.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Course.Credits)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department.Name)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Course.CourseID">Edit</a> |
+@*                <a asp-action="Details" asp-route-id="@item.CourseID">Details</a> |*@
+                <a asp-action="Delete" asp-route-id="@item.Course.CourseID">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

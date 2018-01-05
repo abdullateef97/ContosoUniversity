@@ -1,0 +1,61 @@
+﻿@model List<Department>
+
+@{
+    ViewBag.Title = "Department";
+    Layout = "_Layout";
+}
+
+<h2>Department</h2>
+
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Budget</th>
+        <th>Date</th>
+        
+        <th>Courses</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+      
+       
+        <tr >
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Budget)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+            
+            <td>
+                @foreach (var course in item.Courses)
+                    {
+@*                        <a asp-controller="Course" asp-action="Details">*@
+                            @course.CourseID<span>&nbsp</span> @course.Title <br />
+//                            </a> 
+                    }
+                
+            </td>
+            <td>
+                
+                <a asp-action="Edit" asp-route-id="@item.DepartmentID">Edit</a> |
+@*                <a asp-action="Details" asp-route-DeptId= "@item.DepartmentID">Details</a> |*@
+                <form asp-action="Delete" method="post" asp-route-id = "@item.DepartmentID"> <button type="submit">Delete</button> </form>
+                
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+

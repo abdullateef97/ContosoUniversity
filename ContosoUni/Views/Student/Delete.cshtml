@@ -1,0 +1,40 @@
+﻿@model Student
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h3>Confirm Delete</h3>
+
+<dl>
+    
+    <dt>
+        @Html.DisplayNameFor(model => model.ID)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.ID)
+    </dd>
+    
+    <dt>
+        @Html.DisplayNameFor(model => model.FirstName)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.FirstName)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.LastName)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.LastName)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.EnrollmentDate)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.EnrollmentDate)
+    </dd>
+</dl>
+<form asp-action="Delete" method="post" asp-route-id="@Model.ID">
+    <button type="submit" class="btn btn-primary">Confirm Delete</button>
+</form>
